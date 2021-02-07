@@ -7,6 +7,8 @@ import Listing from "./routes/Listing";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 export default function App() {
+  const randomId = Math.trunc(Math.random() * 1000 + 1);
+  console.log(randomId);
   return (
     <Router>
       <Header />
