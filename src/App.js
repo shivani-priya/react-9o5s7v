@@ -21,6 +21,9 @@ export default function App() {
           <Route path="/">
             <div>
               <h1>HOME</h1>
+              <p className="pokeoftheday">
+                <b>Pokemon of the day:</b>
+              </p>
             </div>
           </Route>
         </Switch>

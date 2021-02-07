@@ -21,3 +21,7 @@ a {
   display: flex;
   flex-wrap: wrap;
 }
+.pokeoftheday {
+  font-size: 25px;
+  color: darkslateblue;
+}
