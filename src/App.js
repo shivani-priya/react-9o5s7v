@@ -26,6 +26,15 @@ export default function App() {
               <p className="pokeoftheday">
                 <b>Pokemon of the day:</b>
               </p>
+              <img
+                height="300px"
+                width="300px"
+                src={
+                  "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/" +
+                  randomId +
+                  ".png"
+                }
+              />
             </div>
           </Route>
         </Switch>
