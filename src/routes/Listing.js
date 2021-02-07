@@ -20,7 +20,7 @@ export default function Listing() {
       .then(
         result => {
           setIsLoaded(true);
-          setPokemons(result.results);
+          setPokemons([...pokemons, ...result.results]);
         },
         error => {
           setIsLoaded(true);
@@ -31,12 +31,12 @@ export default function Listing() {
 
   function loadMore() {
     setOffset(offset + 20);
-    fetchPokemons(offset, 20);
+    // fetchPokemons(offset, 20);
   }
 
   useEffect(() => {
     fetchPokemons(offset, 20);
-  }, []);
+  }, [offset]);
 
   if (error) {
     return <div>Error: {error.message}</div>;
