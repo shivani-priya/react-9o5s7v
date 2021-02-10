@@ -5,6 +5,9 @@ import Footer from "./components/Footer";
 import Details from "./routes/Details";
 import Listing from "./routes/Listing";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import Card from "@material-ui/core/Card";
+import CardActions from "@material-ui/core/CardActions";
+import CardContent from "@material-ui/core/CardContent";
 
 export default function App() {
   const randomId = Math.trunc(Math.random() * 1000 + 1);
@@ -23,14 +26,14 @@ export default function App() {
           <Route path="/">
             <div>
               <h1>HOME</h1>
+              <br />
               <p className="pokeoftheday">
                 <b>Pokemon of the day:</b>
               </p>
+
               <img
-                height="300px"
-                width="300px"
                 src={
-                  "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/" +
+                  "https://assets.pokemon.com/assets/cms2/img/pokedex/full/" +
                   randomId +
                   ".png"
                 }
