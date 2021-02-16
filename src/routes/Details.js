@@ -58,8 +58,16 @@ export default function Details() {
     return (
       <>
         <h1>Details</h1>
-        <div className="listing-container" />
-        <img height="300px" width="300px" src={details.sprites[index]} />
+
+        <div className="pokemon-title-name">
+          <b>
+            {JSON.stringify(details.name)
+              .replace(/['"]+/g, "")
+              .charAt(0)
+              .toUpperCase() + details.name.slice(1)}
+          </b>
+        </div>
+        <img width="300px" src={details.sprites[index]} />
         <br />
         {details.sprites.map((sprite, index) => (
           <img
@@ -69,11 +77,10 @@ export default function Details() {
           />
         ))}
         <br />
+        <Card className="poke-deatils1">hdhgdg</Card>
         <h2>Loading details for Pokemon: {pokeId}</h2>
         <Card className="listing-Card">
           <CardContent>
-            Name: {details.name}
-            <br />
             Height: {details.height}
             <br />
             Weight: {details.weight}
@@ -94,11 +101,24 @@ export default function Details() {
             ))}
             <br />
             Stats:{" "}
-            {details.stats.map((stat, index) => (
-              <div>
-                {stat.name}:{stat.base}
-              </div>
-            ))}
+            <div>
+              <table border="2px">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Base</th>
+                  </tr>
+                </thead>
+                {details.stats.map((stat, index) => (
+                  <tbody>
+                    <tr>
+                      <td>{stat.name}:</td>
+                      <td>{stat.base}</td>
+                    </tr>
+                  </tbody>
+                ))}
+              </table>
+            </div>
           </CardContent>
         </Card>
       </>

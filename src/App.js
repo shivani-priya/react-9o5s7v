@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Details from "./routes/Details";
 import Listing from "./routes/Listing";
+import HomePage from "./routes/HomePage";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Card from "@material-ui/core/Card";
 import CardActions from "@material-ui/core/CardActions";
@@ -32,6 +33,7 @@ export default function App() {
               </p>
 
               <img
+                className="image"
                 src={
                   "https://assets.pokemon.com/assets/cms2/img/pokedex/full/" +
                   randomId +
@@ -39,6 +41,7 @@ export default function App() {
                 }
               />
             </div>
+            <HomePage />
           </Route>
         </Switch>
       </div>

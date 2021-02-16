@@ -4,6 +4,10 @@ p {
 }
 body {
   margin: 0px;
+
+  background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUwhhEoWBt99ifDiVHDrKKHE80yQ5W8g4wFw&usqp=CAU");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .main-container {
   height: calc(100vh - 128px);
@@ -23,5 +27,38 @@ a {
 }
 .pokeoftheday {
   font-size: 25px;
-  color: darkslateblue;
+
+  margin-left: 10px;
+}
+.pokemon-title-name {
+  font-family: "Flexo-Medium", arial, sans-serif;
+  color: white;
+  float: left;
+  font-size: 225%;
+  margin-top: 0.5em;
+  text-align: center;
+  width: 100%;
+  word-break: break-word;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  background: #424242;
+}
+.poke-deatils1 {
+  display: flex;
+  flex-wrap: wrap;
+  box-shadow: 0 3px 5px 2px rgba(255, 105, 135, 0.3);
+  width: 100px;
+  background: linear-gradient(45deg, #2196f3 30%, #21cbf3 90%);
+  margin-left: 500px;
+}
+
+.image {
+  box-shadow: 0 0 2px 1px rgb(0 0 0 / 50%);
+  margin-left: 5px;
+  width: 400px;
+  background-color: white;
 }
