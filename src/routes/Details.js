@@ -67,17 +67,19 @@ export default function Details() {
               .toUpperCase() + details.name.slice(1)}
           </b>
         </div>
-        <img float="left" width="300px" src={details.sprites[index]} />
+        <img width="300px" src={details.sprites[index]} />
         <br />
         {details.sprites.map((sprite, index) => (
           <img
             onClick={() => setIndex(index)}
             src={sprite}
-            style={{ cursor: "pointer", float: "left" }}
+            style={{ cursor: "pointer" }}
           />
         ))}
 
-        <span className="poke-deatils1">lorem100</span>
+        <div className="poke-deatils1">
+          <p>lorem100</p>
+        </div>
         <h2>Loading details for Pokemon: {pokeId}</h2>
         <Card className="listing-Card">
           <CardContent>
@@ -102,7 +104,7 @@ export default function Details() {
             <br />
             Stats:{" "}
             <div>
-              <table border="2px">
+              <table className="table" border="2px">
                 <thead>
                   <tr>
                     <th>Name</th>
