@@ -67,7 +67,7 @@ export default function Details() {
               .toUpperCase() + details.name.slice(1)}
           </b>
         </div>
-        <img width="300px" src={details.sprites[index]} />
+        <img width="300px" height="300px" src={details.sprites[index]} />
         <br />
         {details.sprites.map((sprite, index) => (
           <img

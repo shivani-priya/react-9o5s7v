@@ -49,12 +49,14 @@ a {
 }
 .poke-deatils1 {
   display: block;
-  box-shadow: 0 3px 5px 2px rgba(255, 105, 135, 0.3);
-  width: 100px;
-  background: linear-gradient(45deg, #2196f3 30%, #21cbf3 90%);
+  box-shadow: 0 3px 5px 2px rgba(59, 54, 55, 0.3);
+  max-width: 300px;
+  background: linear-gradient(45deg, #415769 30%, #252829 90%);
   margin-left: 500px;
   position: relative;
   transform: translateY(-20rem);
+  min-height: 200px;
+  border-radius: 5px;
 }
 
 .image {
@@ -66,6 +68,7 @@ a {
   position: relative;
 }
 .table {
-  background: coral;
-  border-style:solid;
+  background: rgb(194, 102, 69);
+  border-style: solid;
+  table-layout: fixed;
 }
