@@ -99,6 +99,7 @@ a {
   white-space: normal;
   word-break: break-word;
   min-height: max-content;
+  text-transform: uppercase;
 }
 ul,
 li {
