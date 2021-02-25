@@ -105,13 +105,9 @@ export default function Details() {
               <li>
                 <span class="attribute-title">Abilities</span>
 
-                <ul class="attribute-list">
-                  <li>
-                    <a href="" class="moreInfo">
-                      <span class="attribute-value">Overgrow</span>
-                    </a>
-                  </li>
-                </ul>
+                <li>
+                  <span class="attribute-value">Overgrow</span>
+                </li>
               </li>
             </ul>
           </div>
