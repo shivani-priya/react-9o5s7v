@@ -82,12 +82,12 @@ export default function Details() {
             <ul>
               <li>
                 <span class="attribute-title">Height</span>
-                <span class="attribute-value">2' 04"</span>
+                <span class="attribute-value">"{details.height}"</span>
               </li>
 
               <li>
                 <span class="attribute-title">Weight</span>
-                <span class="attribute-value">15.2 lbs</span>
+                <span class="attribute-value">{details.weight} lbs</span>
               </li>
 
               <li>
@@ -106,7 +106,9 @@ export default function Details() {
                 <span class="attribute-title">Abilities</span>
 
                 <li>
-                  <span class="attribute-value">Overgrow</span>
+                  {details.abilities.map((ability, index) => (
+                    <span class="attribute-value">{ability}</span>
+                  ))}
                 </li>
               </li>
             </ul>
