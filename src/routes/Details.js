@@ -78,7 +78,43 @@ export default function Details() {
         ))}
 
         <div className="poke-deatils1">
-          <p>lorem100</p>
+          <div className="column-a">
+            <ul>
+              <li>
+                <span class="attribute-title">Height</span>
+                <span class="attribute-value">2' 04"</span>
+              </li>
+
+              <li>
+                <span class="attribute-title">Weight</span>
+                <span class="attribute-value">15.2 lbs</span>
+              </li>
+
+              <li>
+                <span class="attribute-title">Gender</span>
+              </li>
+            </ul>
+          </div>
+          <div class="column-b">
+            <ul>
+              <li>
+                <span class="attribute-title">Category</span>
+                <span class="attribute-value">Seed</span>
+              </li>
+
+              <li>
+                <span class="attribute-title">Abilities</span>
+
+                <ul class="attribute-list">
+                  <li>
+                    <a href="" class="moreInfo">
+                      <span class="attribute-value">Overgrow</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
         </div>
         <h2>Loading details for Pokemon: {pokeId}</h2>
         <Card className="listing-Card">

@@ -51,7 +51,7 @@ a {
   display: block;
   box-shadow: 0 3px 5px 2px rgba(59, 54, 55, 0.3);
   max-width: 300px;
-  background: linear-gradient(45deg, #415769 30%, #252829 90%);
+  background: linear-gradient(45deg, #46c795 30%, #15161670 90%);
   margin-left: 500px;
   position: relative;
   transform: translateY(-20rem);
@@ -71,4 +71,42 @@ a {
   background: rgb(194, 102, 69);
   border-style: solid;
   table-layout: fixed;
+}
+.column-a {
+  float: left;
+  margin-right: -100%;
+  width: 50%;
+  max-height: 200px;
+}
+.attribute-title {
+  font-family: "Flexo-Medium", arial, sans-serif;
+  clear: both;
+  color: #fff;
+  float: left;
+  font-size: 90%;
+  margin: 1.25em 0 0 1.25em;
+  text-transform: none;
+  white-space: normal;
+  word-break: break-word;
+}
+.attribute-value {
+  font-family: "Flexo-Medium", arial, sans-serif;
+  clear: both;
+  color: #212121;
+  float: left;
+  font-size: 95%;
+  margin: 0.75em 1.5em 0 1em;
+  white-space: normal;
+  word-break: break-word;
+  min-height: max-content;
+}
+ul,
+li {
+  list-style: none;
+}
+.column-b {
+  float: right;
+  margin-left: -50.7825%;
+  width: 50%;
+  max-height: 200px;
 }
