@@ -117,10 +117,6 @@ export default function Details() {
         <h2>Loading details for Pokemon: {pokeId}</h2>
         <Card className="listing-Card">
           <CardContent>
-            Height: {details.height}
-            <br />
-            Weight: {details.weight}
-            <br />
             Abilities:{" "}
             {details.abilities.map((ability, index) => (
               <div>{ability}</div>
