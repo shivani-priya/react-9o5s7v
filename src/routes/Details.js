@@ -91,7 +91,10 @@ export default function Details() {
               </li>
 
               <li>
-                <span class="attribute-title">Gender</span>
+                <span class="attribute-title">Types:</span>
+                {details.types.map((type, index) => (
+                  <span class="attribute-value">{type}</span>
+                ))}
               </li>
             </ul>
           </div>
@@ -113,44 +116,34 @@ export default function Details() {
               </li>
             </ul>
           </div>
+          <div className="column-c">
+            <span style={{ background: "yellow" }}>Stats: </span>
+            <table className="table" border="2px">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Base</th>
+                </tr>
+              </thead>
+              {details.stats.map((stat, index) => (
+                <tbody>
+                  <tr>
+                    <td>{stat.name}:</td>
+                    <td>{stat.base}</td>
+                  </tr>
+                </tbody>
+              ))}
+            </table>
+          </div>
         </div>
         <h2>Loading details for Pokemon: {pokeId}</h2>
         <Card className="listing-Card">
           <CardContent>
-            Abilities:{" "}
-            {details.abilities.map((ability, index) => (
-              <div>{ability}</div>
-            ))}
-            <br />
             Moves:{" "}
             {details.moves.map((move, index) => (
               <div>{move}</div>
             ))}
             <br />
-            Types:{" "}
-            {details.types.map((type, index) => (
-              <div>{type}</div>
-            ))}
-            <br />
-            Stats:{" "}
-            <div>
-              <table className="table" border="2px">
-                <thead>
-                  <tr>
-                    <th>Name</th>
-                    <th>Base</th>
-                  </tr>
-                </thead>
-                {details.stats.map((stat, index) => (
-                  <tbody>
-                    <tr>
-                      <td>{stat.name}:</td>
-                      <td>{stat.base}</td>
-                    </tr>
-                  </tbody>
-                ))}
-              </table>
-            </div>
           </CardContent>
         </Card>
       </>

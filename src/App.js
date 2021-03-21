@@ -13,6 +13,11 @@ import CardContent from "@material-ui/core/CardContent";
 export default function App() {
   const randomId = Math.trunc(Math.random() * 1000 + 1);
   console.log(randomId);
+  function myFunction(sender, eventArgs) {
+    const img = document.getElementById("imag");
+    img.style.cssText =
+      "box-shadow: 0 0 2px 1px rgb(0 0 0 / 50%); margin-left: 5px; width: 400px; background-color: rgba(85, 168, 85, 0.473);border-radius: 500px; position: relative; opacity: 100%;";
+  }
   return (
     <Router>
       <Header />
@@ -34,6 +39,8 @@ export default function App() {
 
               <img
                 className="image"
+                id="imag"
+                onClick={() => myFunction()}
                 src={
                   "https://assets.pokemon.com/assets/cms2/img/pokedex/full/" +
                   randomId +
