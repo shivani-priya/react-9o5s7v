@@ -75,6 +75,7 @@ a {
 }
 
 .image {
+  display: flex;
   box-shadow: 0 0 2px 1px rgb(0 0 0 / 50%);
   margin-left: 5px;
   width: 400px;

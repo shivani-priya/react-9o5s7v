@@ -47,6 +47,7 @@ export default function App() {
                   ".png"
                 }
               />
+              <HomePage />
             </div>
             <HomePage />
           </Route>
