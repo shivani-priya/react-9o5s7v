@@ -9,9 +9,8 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Card from "@material-ui/core/Card";
 import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
-
+const randomId = Math.trunc(Math.random() * 1000 + 1);
 export default function App() {
-  const randomId = Math.trunc(Math.random() * 1000 + 1);
   console.log(randomId);
   function myFunction(sender, eventArgs) {
     const img = document.getElementById("imag");
@@ -47,7 +46,6 @@ export default function App() {
                   ".png"
                 }
               />
-              <HomePage />
             </div>
             <HomePage />
           </Route>
@@ -57,3 +55,4 @@ export default function App() {
     </Router>
   );
 }
+export { randomId };
