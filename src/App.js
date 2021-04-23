@@ -17,6 +17,10 @@ export default function App() {
     img.style.cssText =
       "box-shadow: 0 0 2px 1px rgb(0 0 0 / 50%); margin-left: 5px; width: 400px; background-color: rgba(85, 168, 85, 0.473);border-radius: 500px; position: relative; opacity: 100%;";
   }
+  window.addEventListener("beforeunload", function(e) {
+    e.preventDefault();
+    e.returnValue = "";
+  });
   return (
     <Router>
       <Header />
