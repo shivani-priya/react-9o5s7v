@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./style.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -11,6 +11,20 @@ import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
 const randomId = Math.trunc(Math.random() * 1000 + 1);
 export default function App() {
+  const [pokemons, setPokemons] = useState([]);
+  //
+  //function fetchDetails() {
+  fetch("https://pokeapi.co/api/v2/pokemon/" + randomId)
+    .then(res => res.json())
+    .then(result => {
+      setPokemons(result);
+      // console.log(pokemons);
+      // setIsLoaded(true);
+      // console.log(result.game_indices);
+    });
+
+  //useEffect(() => fetchDetails(), []);
+
   console.log(randomId);
   function myFunction(sender, eventArgs) {
     const img = document.getElementById("imag");
@@ -50,6 +64,11 @@ export default function App() {
                   ".png"
                 }
               />
+            </div>
+            <div>
+              <p>
+                {pokemons.name}||{pokemons.height}||{pokemons.weight}
+              </p>
             </div>
             <HomePage />
           </Route>

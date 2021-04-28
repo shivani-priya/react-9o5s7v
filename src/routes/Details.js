@@ -81,36 +81,36 @@ export default function Details() {
           <div className="column-a">
             <ul>
               <li>
-                <span class="attribute-title">Height</span>
-                <span class="attribute-value">"{details.height}"</span>
+                <span className="attribute-title">Height</span>
+                <span className="attribute-value">"{details.height}"</span>
               </li>
 
               <li>
-                <span class="attribute-title">Weight</span>
-                <span class="attribute-value">{details.weight} lbs</span>
+                <span className="attribute-title">Weight</span>
+                <span className="attribute-value">{details.weight} lbs</span>
               </li>
 
               <li>
-                <span class="attribute-title">Types:</span>
+                <span className="attribute-title">Types:</span>
                 {details.types.map((type, index) => (
-                  <span class="attribute-value">{type}</span>
+                  <span className="attribute-value">{type}</span>
                 ))}
               </li>
             </ul>
           </div>
-          <div class="column-b">
+          <div className="column-b">
             <ul>
               <li>
-                <span class="attribute-title">Category</span>
-                <span class="attribute-value">Seed</span>
+                <span className="attribute-title">Category</span>
+                <span className="attribute-value">Seed</span>
               </li>
 
               <li>
-                <span class="attribute-title">Abilities</span>
+                <span className="attribute-title">Abilities</span>
 
                 <li>
                   {details.abilities.map((ability, index) => (
-                    <span class="attribute-value">{ability}</span>
+                    <span className="attribute-value">{ability}</span>
                   ))}
                 </li>
               </li>
