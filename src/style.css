@@ -5,7 +5,7 @@ p {
 body {
   margin: 0px;
 
-  background: url("https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/v300-ning-22-patterns_2.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=7bc5e3f0bb7e04e67e5e81ce542a9442");
+  background: url('https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/v300-ning-22-patterns_2.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=7bc5e3f0bb7e04e67e5e81ce542a9442');
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -31,7 +31,7 @@ a {
   margin-left: 10px;
 }
 .load-more {
-  font-family: "Flexo-Demi", arial, sans-serif;
+  font-family: 'Flexo-Demi', arial, sans-serif;
   align-items: center;
   align-self: center;
   float: right;
@@ -46,7 +46,7 @@ a {
   box-shadow: 0 3px 5px 2px rgba(241, 25, 9, 0.432);
 }
 .pokemon-title-name {
-  font-family: "Flexo-Medium", arial, sans-serif;
+  font-family: 'Flexo-Medium', arial, sans-serif;
   color: white;
   float: left;
   font-size: 225%;
@@ -75,7 +75,7 @@ a {
 }
 
 .image {
-  display: flex;
+  display: inline-block;
   box-shadow: 0 0 2px 1px rgb(0 0 0 / 50%);
   margin-left: 5px;
   width: 400px;
@@ -108,7 +108,7 @@ a {
   transform: translate(-2rem, -0.5rem);
 }
 .attribute-title {
-  font-family: "Flexo-Medium", arial, sans-serif;
+  font-family: 'Flexo-Medium', arial, sans-serif;
   clear: both;
   color: #fff;
   float: left;
@@ -119,7 +119,7 @@ a {
   word-break: break-word;
 }
 .attribute-value {
-  font-family: "Flexo-Medium", arial, sans-serif;
+  font-family: 'Flexo-Medium', arial, sans-serif;
   clear: both;
   color: #212121;
   float: left;
