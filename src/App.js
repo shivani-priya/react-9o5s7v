@@ -12,6 +12,8 @@ import CardContent from '@material-ui/core/CardContent';
 const randomId = Math.trunc(Math.random() * 1000 + 1);
 export default function App() {
   const [pokemons, setPokemons] = useState([]);
+  const cardDetails = document.getElementById('card-details');
+
   //
   //function fetchDetails() {
   fetch('https://pokeapi.co/api/v2/pokemon/' + randomId)
@@ -28,6 +30,7 @@ export default function App() {
   console.log(randomId);
   function myFunction(sender, eventArgs) {
     const img = document.getElementById('imag');
+    cardDetails.style.opacity = 1;
     img.style.cssText =
       'box-shadow: 0 0 2px 1px rgb(0 0 0 / 50%); margin-left: 5px; width: 400px; background-color: rgba(85, 168, 85, 0.473);border-radius: 500px; position: relative; opacity: 100%;';
   }
@@ -47,12 +50,12 @@ export default function App() {
             <Listing />
           </Route>
           <Route path="/">
-            <div>
-              <h1>HOME</h1>
+            <p className="pokeoftheday">
+              <b> Click to below to see pokemon of the day:</b>
+            </p>
+            <div style={{ display: 'flex' }}>
+              {/* <h1>HOME</h1> */}
               <br />
-              <p className="pokeoftheday">
-                <b>Pokemon of the day:</b>
-              </p>
 
               <img
                 className="image"
@@ -65,13 +68,54 @@ export default function App() {
                 }
               />
               {/* <div> */}
-              <span>
-                {pokemons.name}||{pokemons.height}||{pokemons.weight}
-              </span>
+              {/* <article className="card">
+              
+                {
+                  <img
+                    className="card__img"
+                    src={
+                      'https://assets.pokemon.com/assets/cms2/img/pokedex/full/' +
+                      randomId +
+                      '.png'
+                    }
+                  />
+                  
+                <div class="country__data">
+                  <h3 class="country__name">${data.name}</h3>
+                  <h4 class="country__region">${data.region}</h4>
+                  <p class="country__row">
+                    <span>👫</span>${(+data.population / 1000000).toFixed(1)}
+                  </p>
+                  <p class="country__row">
+                    <span>🗣️</span>${data.languages[0].name}
+                  </p>
+                  <p class="country__row">
+                    <span>💰</span>${data.currencies[0].code}
+                  </p>
+                </div> 
+                }
+              </article> */}
+              <article id="card-details" className="card">
+                {/* {pokemons.name}||{pokemons.height}||{pokemons.weight} */}
+                <div className="card__data">
+                  <h3 className="card__name">Pokemon: {pokemons.name}</h3>
+                  <h4 className="card__hw">Height: {pokemons.height}</h4>
+                  <h4 className="card__hw">Weight: {pokemons.weight}</h4>
+                  {/* <p class="country__row">
+                    <span>👫</span>${(+data.population / 1000000).toFixed(1)}
+                  </p>
+                  <p class="country__row">
+                    <span>🗣️</span>${data.languages[0].name}
+                  </p>
+                  <p class="country__row">
+                    <span>💰</span>${data.currencies[0].code}
+                  </p> */}
+                </div>
+              </article>
               {/* </div> */}
             </div>
 
-            <HomePage />
+            {/* <HomePage /> */}
           </Route>
         </Switch>
       </div>

@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
-import Card from "@material-ui/core/Card";
-import CardContent from "@material-ui/core/CardContent";
+import React, { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
+import Card from '@material-ui/core/Card';
+import CardContent from '@material-ui/core/CardContent';
 
 export default function Details() {
   const { pokeId } = useParams();
@@ -41,7 +41,7 @@ export default function Details() {
     return pokeDetails;
   }
   function fetchDetails() {
-    fetch("https://pokeapi.co/api/v2/pokemon/" + pokeId)
+    fetch('https://pokeapi.co/api/v2/pokemon/' + pokeId)
       .then(res => res.json())
       .then(result => {
         setDetails(transformResponse(result));
@@ -57,23 +57,25 @@ export default function Details() {
   } else {
     return (
       <>
-        <h1>Details</h1>
+        {/* <h1>Details</h1> */}
 
         <div className="pokemon-title-name">
           <b>
             {JSON.stringify(details.name)
-              .replace(/['"]+/g, "")
+              .replace(/['"]+/g, '')
               .charAt(0)
               .toUpperCase() + details.name.slice(1)}
           </b>
         </div>
-        <img width="300px" height="300px" src={details.sprites[index]} />
+        <img width="480px" height="480px" src={details.sprites[index]} />
         <br />
         {details.sprites.map((sprite, index) => (
           <img
+            width="120px"
+            height="120px"
             onClick={() => setIndex(index)}
             src={sprite}
-            style={{ cursor: "pointer" }}
+            style={{ cursor: 'pointer' }}
           />
         ))}
 
@@ -117,7 +119,7 @@ export default function Details() {
             </ul>
           </div>
           <div className="column-c">
-            <span style={{ background: "yellow" }}>Stats: </span>
+            <span style={{ background: 'yellow' }}>Stats: </span>
             <table className="table" border="2px">
               <thead>
                 <tr>
@@ -139,7 +141,7 @@ export default function Details() {
         <h2>Loading details for Pokemon: {pokeId}</h2>
         <Card className="listing-Card">
           <CardContent>
-            Moves:{" "}
+            Moves:{' '}
             {details.moves.map((move, index) => (
               <div>{move}</div>
             ))}

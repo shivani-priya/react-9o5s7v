@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import Card from "@material-ui/core/Card";
-import CardActions from "@material-ui/core/CardActions";
-import CardContent from "@material-ui/core/CardContent";
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import Card from '@material-ui/core/Card';
+import CardActions from '@material-ui/core/CardActions';
+import CardContent from '@material-ui/core/CardContent';
 
 export default function Listing() {
   const [error, setError] = useState(null);
@@ -14,7 +14,7 @@ export default function Listing() {
     setIsLoaded(false);
     setPokemons([]);
     fetch(
-      "https://pokeapi.co/api/v2/pokemon/?limit=" + limit + "&offset=" + offset
+      'https://pokeapi.co/api/v2/pokemon/?limit=' + limit + '&offset=' + offset
     )
       .then(res => res.json())
       .then(
@@ -49,28 +49,28 @@ export default function Listing() {
           {pokemons.map((pokemon, index) => (
             <Card
               className="listing-card"
-              key={pokemon.url.slice(pokemon.url.indexOf("/pokemon/") + 9, -1)}
+              key={pokemon.url.slice(pokemon.url.indexOf('/pokemon/') + 9, -1)}
             >
               <CardContent>
                 <Link
                   to={
-                    "/details/" +
-                    pokemon.url.slice(pokemon.url.indexOf("/pokemon/") + 9, -1)
+                    '/details/' +
+                    pokemon.url.slice(pokemon.url.indexOf('/pokemon/') + 9, -1)
                   }
                 >
-                  Id:{" "}
-                  {pokemon.url.slice(pokemon.url.indexOf("/pokemon/") + 9, -1)}
+                  Id:{' '}
+                  {pokemon.url.slice(pokemon.url.indexOf('/pokemon/') + 9, -1)}
                   <br />
                   Name: {pokemon.name}
                   <br />
                   <img
                     src={
-                      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/" +
+                      'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/' +
                       pokemon.url.slice(
-                        pokemon.url.indexOf("/pokemon/") + 9,
+                        pokemon.url.indexOf('/pokemon/') + 9,
                         -1
                       ) +
-                      ".png"
+                      '.png'
                     }
                   />
                 </Link>
@@ -78,7 +78,11 @@ export default function Listing() {
             </Card>
           ))}
         </div>
-        <button onClick={() => loadMore()}>Load More</button>
+        <div style={{ textAlign: 'center' }}>
+          <button className="btn-card" onClick={() => loadMore()}>
+            Load More
+          </button>
+        </div>
       </>
     );
   }
