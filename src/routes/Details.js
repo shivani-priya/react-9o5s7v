@@ -71,6 +71,7 @@ export default function Details() {
         <br />
         {details.sprites.map((sprite, index) => (
           <img
+            key={index}
             width="120px"
             height="120px"
             onClick={() => setIndex(index)}
@@ -95,7 +96,9 @@ export default function Details() {
               <li>
                 <span className="attribute-title">Types:</span>
                 {details.types.map((type, index) => (
-                  <span className="attribute-value">{type}</span>
+                  <span key={index} className="attribute-value">
+                    {type}
+                  </span>
                 ))}
               </li>
             </ul>
@@ -112,7 +115,9 @@ export default function Details() {
 
                 <li>
                   {details.abilities.map((ability, index) => (
-                    <span className="attribute-value">{ability}</span>
+                    <span key={index} className="attribute-value">
+                      {ability}
+                    </span>
                   ))}
                 </li>
               </li>
@@ -128,8 +133,8 @@ export default function Details() {
                 </tr>
               </thead>
               {details.stats.map((stat, index) => (
-                <tbody>
-                  <tr>
+                <tbody key={index}>
+                  <tr key={index}>
                     <td>{stat.name}:</td>
                     <td>{stat.base}</td>
                   </tr>
@@ -143,7 +148,7 @@ export default function Details() {
           <CardContent>
             Moves:{' '}
             {details.moves.map((move, index) => (
-              <div>{move}</div>
+              <div key={index}>{move}</div>
             ))}
             <br />
           </CardContent>
