@@ -113,13 +113,13 @@ export default function Details() {
               <li>
                 <span className="attribute-title">Abilities</span>
 
-                <li>
+                <span>
                   {details.abilities.map((ability, index) => (
                     <span key={index} className="attribute-value">
                       {ability}
                     </span>
                   ))}
-                </li>
+                </span>
               </li>
             </ul>
           </div>
